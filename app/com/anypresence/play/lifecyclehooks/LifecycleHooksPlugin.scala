@@ -11,11 +11,11 @@ class LifecycleHooksPlugin(app: Application) extends Plugin {
   }
   
   override def onStart(): Unit = {
-    debug(" *** LifecycleHooksPlugin starting ***")
+    debug("LifecycleHooksPlugin starting")
   }
   
   override def onStop(): Unit = {
-    debug(" *** LifecycleHooksPlugin stopping ***")
+    debug("LifecycleHooksPlugin stopping")
   }
   
 }

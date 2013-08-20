@@ -126,10 +126,10 @@ object LifecycleHooks {
     protected def doDelete(instance: T): DeletableReturnType
   }
 
-  trait Crud[T, U] extends Creatable[T] with Updatable[T] with Deletable[T] {
-    override type DeletableReturnType = U
-    override type CreatableReturnType = Option[T]
-    override type UpdatableReturnType = Option[T]
+  trait Crud[T, U, V] extends Creatable[T] with Updatable[T] with Deletable[T] {
+    override type CreatableReturnType = U
+    override type UpdatableReturnType = U
+    override type DeletableReturnType = V
   }
   
 }

@@ -128,8 +128,8 @@ object LifecycleHooks {
 
   trait Crud[T, U] extends Creatable[T] with Updatable[T] with Deletable[T] {
     override type DeletableReturnType = U
-    override type CreatableReturnType = U
-    override type UpdatableReturnType = U
+    override type CreatableReturnType = Option[T]
+    override type UpdatableReturnType = Option[T]
   }
   
 }
